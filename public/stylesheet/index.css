@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #3498db;
+  color: #34495e;
+  font-family: 'Baloo Thambi 2', cursive;
+  max-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100vh;
+}
+
+.container > h1 {
+  text-align: center;
+  padding-top: 1rem;
+  color: #ecf0f1;
+}
+
+.container .note {
+  font-size: 0.9rem;
+  color: #d35400;
+}
+
+.container form {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.container form .input {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.container form .input label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+
+.container form .input input {
+  width: 100%;
+  background-color: #d5dbdf;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  border: 2px solid #d5dbdf;
+}
+
+.container form .input input:focus {
+  border: 2px solid #3498db;
+  background-color: #ecf0f1;
+}
+
+.container form .input input[type="submit"] {
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: #ecf0f1;
+  padding: 0.6rem 1rem;
+  width: auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container form .input input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.container .error {
+  border-radius: 5px;
+  background-color: #ffebee;
+  color: #f44336;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.container .my-logo {
+  width: 40%;
+  margin-left: auto;
+  margin-top: 2rem;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.container .my-logo p {
+  font-size: 0.8rem;
+  color: #34495e;
+}
+
+.container .my-logo img {
+  width: 100%;
+}
+
+.chatHouse {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  position: relative;
+}
+
+.chatHouse .alart {
+  background-color: #E8EAF6;
+  color: #3F51B5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatHouse .usernameIcon {
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.chatHouse .usernameIcon img {
+  vertical-align: middle;
+}
+
+.chatHouse .usernameIcon span {
+  font-weight: bold;
+}
+
+.chatHouse ul {
+  padding: 2rem;
+  overflow-y: scroll;
+  height: 50vh;
+}
+
+.chatHouse ul::-webkit-scrollbar {
+  width: 3px;
+}
+
+.chatHouse ul::-webkit-scrollbar-track {
+  background-color: #ecf0f1;
+}
+
+.chatHouse ul::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+}
+
+.chatHouse ul li {
+  background-color: #d5dbdf;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.chatHouse ul li .name {
+  font-weight: bold;
+}
+
+.chatHouse ul li.rMsg {
+  text-align: right;
+}
+
+.chatHouse .typing {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.chatHouse .typing > span:first-child {
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */

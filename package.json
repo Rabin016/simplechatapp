@@ -1,0 +1,19 @@
+{
+  "name": "chat-liferc",
+  "version": "1.0.0",
+  "description": "And simple chat app with scocket.io",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "nodemon": "nodemon dev"
+  },
+  "author": "Life RC",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

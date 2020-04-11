@@ -1,0 +1,161 @@
+// Some Global stuff
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3498db;
+    color: #34495e;
+    font-family: 'Baloo Thambi 2', cursive;
+    max-height: 100vh;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100vh;
+    >h1{
+        text-align: center;
+        padding-top: 1rem;
+        color: #ecf0f1;
+    }
+    .note{
+        font-size: 0.9rem;
+        color: #d35400;
+
+    }
+        form{
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 2rem;
+            .input{
+                text-align: center;
+                margin-bottom: 1rem;
+                label{
+                    text-align: left;
+                    display: block;
+                    font-weight: bold;
+                }
+                input{
+                    width: 100%;
+                    background-color: #d5dbdf;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 0.6rem 1rem;
+                    border: 2px solid #d5dbdf;
+                    &:focus{
+                        border: 2px solid #3498db;
+                        background-color: #ecf0f1;
+                    }
+                }
+                input[type="submit"]{
+                    background-color: #3498db;
+                    border: none;
+                    border-radius: 5px;
+                    color: #ecf0f1;
+                    padding: 0.6rem 1rem;
+                    width: auto;
+                    font-weight: bold;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #2980b9;
+                    }
+                }
+            }
+            
+        }
+        .error{
+            border-radius: 5px;
+            background-color: #ffebee;
+            color: #f44336;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+        .my-logo{
+            width: 40%;
+            margin-left: auto;
+            margin-top: 2rem;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 0.5rem;
+            p{
+                font-size: 0.8rem;
+                color: #34495e;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    
+}
+
+.chatHouse{
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    position: relative;
+    .alart{
+        background-color: #E8EAF6;
+        color: #3F51B5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+
+    }
+    .usernameIcon{
+        padding-left: 2rem;
+        padding-top: 1rem;
+        img{
+            vertical-align: middle;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+    ul{
+        padding: 2rem;
+        overflow-y: scroll;
+        height: 50vh;
+        &::-webkit-scrollbar{
+            width: 3px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: #ecf0f1;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #3498db;
+        }
+        li{
+            background-color: #d5dbdf;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+
+            .name{
+                font-weight: bold;
+            }
+            &.rMsg{
+                text-align: right;
+            }
+        }
+    }
+    .typing{
+        font-size: 0.8rem;
+        text-align: right;
+        &>span:first-child{
+            font-weight: bold;
+        }
+    }
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat in Life RC</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"></script>
+    <link rel="stylesheet" href="stylesheet/index.css">
+    <link rel="shortcut icon" href="img/My-Logo-ico-64.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Simple Chat App</h1>
+            <div class="error" v-if="error">
+                <span>{{ error }}</span>
+            </div>
+            <form v-if="!allow">
+                <div class="input">
+                    <label for="username">Name:</label>
+                    <input type="text" v-model="username" placeholder="Please entre your name" required ref="userVal">
+                </div>
+                <div class="input">
+                    <input type="submit" @click.prevent="userNameEmit()" value="Chat Now">
+                </div>
+                <div class="note">
+                    <p>* Conversation will not be saved in clint/server. So after leaving/refreashing chat room all
+                        conversation will be
+                        deleted
+                        autometically from client side.</p>
+                </div>
+            </form>
+            <div class="chatHouse" v-if="allow">
+                <div class="usernameIcon">
+                    <img src="img/account.png" alt="username">
+                    <span>{{ username }}</span>
+                </div>
+                <div class="alart" v-show="alart">
+                    <p>{{ alart }}</p>
+                </div>
+                <ul v-chat-scroll="{smooth: true}">
+                    <li v-for="(allMsgBody, index) in allMsgBodys" key="index"
+                        :class="{rMsg: allMsgBody.user == username}">
+                        <p class="name">{{ allMsgBody.user }}</p>
+                        <p class="msg">{{ allMsgBody.msg }}</p>
+                    </li>
+                </ul>
+                <form>
+                    <div class="typing" v-show="allTypingName">
+                        <span>{{ allTypingName }}</span>
+                        <span> is typing</span>
+                    </div>
+                    <div class="input">
+                        <label for="massage">Massage:</label>
+                        <input type="text" v-model="msg" placeholder="Please entre your massage" required
+                            @keypress="typingSend">
+                    </div>
+                    <div class="input">
+                        <input type="submit" @click.prevent="sendmsgEmit()" value="Send" required>
+                    </div>
+                </form>
+            </div>
+            <div class="my-logo">
+                <a href="https://liferc.tk">
+                    <p>Developed by:</p>
+                    <img src="img/My-Logo.png" alt="liferc">
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-chat-scroll/dist/vue-chat-scroll.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
