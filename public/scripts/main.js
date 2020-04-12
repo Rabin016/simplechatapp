@@ -8,7 +8,9 @@ new Vue ({
         msg: null,
         alart: '',
         allMsgBodys: [],
-        allTypingName: null
+        allTypingName: null,
+        online: 0,
+        leavedMsg: null
     },
     created(){
 
@@ -72,6 +74,21 @@ new Vue ({
             setTimeout(()=>{
                 this.allTypingName=null
             }, 4000)
-        })
-    },
+        }),
+        this.socket.on('online', data=>{
+            this.online = data
+        }),
+
+        this.socket.on('closeChat', data=>{
+            this.leavedMsg = data
+            this.online--
+            setTimeout(()=>{
+                this.leavedMsg = null
+            }, 4000)
+        }),
+        window.onbeforeunload = () => {
+            this.socket.emit('closeChat', this.username)
+        }
+
+    }
 })

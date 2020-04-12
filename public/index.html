@@ -14,7 +14,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1>Simple Chat App</h1>
+            <h1><img src="img/Group.png" alt="logo"> Simple Chat App</h1>
             <div class="error" v-if="error">
                 <span>{{ error }}</span>
             </div>
@@ -34,12 +34,21 @@
                 </div>
             </form>
             <div class="chatHouse" v-if="allow">
-                <div class="usernameIcon">
-                    <img src="img/account.png" alt="username">
-                    <span>{{ username }}</span>
+                <div class="status">
+                    <div class="usernameIcon">
+                        <img src="img/account.png" alt="username">
+                        <span>{{ username }}</span>
+                    </div>
+                    <div class="online">
+                        <span>Online: </span>
+                        <span>{{ online }}</span>
+                    </div>
                 </div>
                 <div class="alart" v-show="alart">
                     <p>{{ alart }}</p>
+                </div>
+                <div class="alart" v-show="leavedMsg" v-show="leavedMsg">
+                    <p>{{ leavedMsg }} Has leaved</p>
                 </div>
                 <ul v-chat-scroll="{smooth: true}">
                     <li v-for="(allMsgBody, index) in allMsgBodys" key="index"

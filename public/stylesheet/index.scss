@@ -26,6 +26,9 @@ li{
         text-align: center;
         padding-top: 1rem;
         color: #ecf0f1;
+        img{
+            width: 2.5rem;
+        }
     }
     .note{
         font-size: 0.9rem;
@@ -113,14 +116,21 @@ li{
         font-weight: bold;
 
     }
-    .usernameIcon{
-        padding-left: 2rem;
-        padding-top: 1rem;
-        img{
-            vertical-align: middle;
+    .status{
+        display: flex;
+        justify-content: space-between;
+        // flex-direction: column;
+        padding: 1rem 2rem 0 2rem;
+        .usernameIcon{
+            img{
+                vertical-align: middle;
+            }
+            span{
+                font-weight: bold;
+            }
         }
-        span{
-            font-weight: bold;
+        .online{
+            color: green;
         }
     }
     ul{

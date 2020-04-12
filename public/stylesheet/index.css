@@ -30,6 +30,10 @@ li {
   color: #ecf0f1;
 }
 
+.container > h1 img {
+  width: 2.5rem;
+}
+
 .container .note {
   font-size: 0.9rem;
   color: #d35400;
@@ -125,17 +129,26 @@ li {
   font-weight: bold;
 }
 
-.chatHouse .usernameIcon {
-  padding-left: 2rem;
-  padding-top: 1rem;
+.chatHouse .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem 0 2rem;
 }
 
-.chatHouse .usernameIcon img {
+.chatHouse .status .usernameIcon img {
   vertical-align: middle;
 }
 
-.chatHouse .usernameIcon span {
+.chatHouse .status .usernameIcon span {
   font-weight: bold;
+}
+
+.chatHouse .status .online {
+  color: green;
 }
 
 .chatHouse ul {
